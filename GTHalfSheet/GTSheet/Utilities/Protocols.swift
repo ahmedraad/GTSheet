@@ -27,17 +27,17 @@ public enum DismissMethod {
 }
 
 internal extension Array where Element == DismissMethod {
-    internal var allowSwipe: Bool {
+    var allowSwipe: Bool {
         return contains(.swipe)
     }
 
-    internal var allowTap: Bool {
+    var allowTap: Bool {
         return contains(.tap)
     }
 }
 
 public protocol HalfSheetPresentableProtocol: class {
-    weak var managedScrollView: UIScrollView? { get }
+    var managedScrollView: UIScrollView? { get }
     var dismissMethod: [DismissMethod] { get }
     var sheetHeight: CGFloat? { get }
 }
